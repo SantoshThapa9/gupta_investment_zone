@@ -20,9 +20,9 @@ export default function ContactPage() {
       <section className="py-20  ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-card p-15 rounded-3xl border border-gray-300/50">
+            <div className="bg-card p-5 md:p-10 rounded-3xl border border-gray-300/50">
               <h2 className="text-2xl font-bold mb-3">Send us a Message</h2>
-              <p className="text-md mb-8 opacity-80">
+              <p className="  mb-8 opacity-80">
                 Fill out the form below and we will get back to you within 24
                 hours
               </p>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold   ">YouTube</h4>
-                      <p className=" ">Watch our investment guides</p>
+                      <p>Watch our investment guides</p>
                     </div>
                   </div>
 
@@ -128,7 +128,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold   ">Instagram</h4>
-                      <p className=" ">Follow us for daily updates</p>
+                      <p>Follow us for daily updates</p>
                     </div>
                   </div>
 
@@ -144,7 +144,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold   ">WhatsApp</h4>
-                      <p className=" ">Chat with us directly</p>
+                      <p>Chat with us directly</p>
                     </div>
                   </div>
                 </div>
@@ -231,15 +231,15 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="  p-6 rounded-lg shadow-sm text-center">
               <h3 className="text-lg font-semibold    mb-2">Monday - Friday</h3>
-              <p className=" ">9:00 AM - 6:00 PM</p>
+              <p>9:00 AM - 6:00 PM</p>
             </div>
             <div className="  p-6 rounded-lg shadow-sm text-center">
               <h3 className="text-lg font-semibold    mb-2">Saturday</h3>
-              <p className=" ">9:00 AM - 2:00 PM</p>
+              <p>9:00 AM - 2:00 PM</p>
             </div>
             <div className=" p-6 rounded-lg shadow-sm text-center">
               <h3 className="text-lg font-semibold    mb-2">Sunday</h3>
-              <p className=" ">Closed</p>
+              <p>Closed</p>
             </div>
           </div>
         </div>

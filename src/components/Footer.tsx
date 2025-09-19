@@ -34,27 +34,18 @@ export default function Footer() {
               Gupta Investment Zone
             </span>
           </div>
-          <p className="text-muted-foreground mb-4 max-w-md">
+          <p className="  mb-4 max-w-md">
             Authorized Partner of Angel One. Start your investment journey with
             the lowest brokerage rates and trusted support.
           </p>
           <div className="flex space-x-4">
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
+            <Link href="#" className="  hover:text-primary transition-colors">
               <FiYoutube size={24} />
             </Link>
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
+            <Link href="#" className="  hover:text-primary transition-colors">
               <FiInstagram size={24} />
             </Link>
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
+            <Link href="#" className="  hover:text-primary transition-colors">
               <MessageCircle size={24} />
             </Link>
           </div>
@@ -65,17 +56,14 @@ export default function Footer() {
           <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <Link
-                href="/"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
+              <Link href="/" className="  hover:text-primary transition-colors">
                 Home
               </Link>
             </li>
             <li>
               <Link
                 href="/about"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="  hover:text-primary transition-colors"
               >
                 About Us
               </Link>
@@ -83,7 +71,7 @@ export default function Footer() {
             <li>
               <Link
                 href="/services"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="  hover:text-primary transition-colors"
               >
                 Services
               </Link>
@@ -91,7 +79,7 @@ export default function Footer() {
             <li>
               <Link
                 href="/contact"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="  hover:text-primary transition-colors"
               >
                 Contact
               </Link>
@@ -104,30 +92,33 @@ export default function Footer() {
           <h3 className=" font-semibold text-foreground mb-4">Services</h3>
           <ul className="space-y-2">
             <li>
-              <span className="text-muted-foreground">
-                Demat Account Opening
-              </span>
+              <span>Demat Account Opening</span>
             </li>
             <li>
-              <span className="text-muted-foreground">Trading Support</span>
+              <span>Trading Support</span>
             </li>
             <li>
-              <span className="text-muted-foreground">Investment Guidance</span>
+              <span>Investment Guidance</span>
             </li>
             <li>
-              <span className="text-muted-foreground">
-                Portfolio Management
-              </span>
+              <span>Portfolio Management</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-border mt-8 pt-8 text-center">
-        <p className="text-muted-foreground">
-          © 2025 Gupta Investment Zone. All rights reserved. | Authorized
-          Partner of Angel One
-        </p>
+        <footer className="text-center text-sm  mt-10">
+          © {new Date().getFullYear()} . Built by{" "}
+          <a
+            href="https://www.santoshthapa.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-700"
+          >
+            Santosh
+          </a>
+        </footer>
       </div>
     </footer>
   );

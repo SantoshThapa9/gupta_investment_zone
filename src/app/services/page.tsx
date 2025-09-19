@@ -22,7 +22,7 @@ export default function ServicesPage() {
             <h1 className="  font-bold font-font3 text-4xl lg:text-5xl text-foreground mb-6">
               Our Services & Benefits
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl   mb-8">
               Comprehensive investment solutions designed to maximize your
               returns
             </p>
@@ -37,7 +37,7 @@ export default function ServicesPage() {
             <h2 className="  font-bold font-font3 text-3xl lg:text-4xl text-foreground mb-4">
               Key Benefits
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg   max-w-2xl mx-auto">
               Experience the advantages of partnering with us for your
               investment journey
             </p>
@@ -50,7 +50,7 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="text-primary" size={32} />
                 </div>
-                <h3 className="font-font3 font-semibold text-md mb-2">
+                <h3 className="font-font3 font-semibold   mb-2">
                   Lowest Brokerage
                 </h3>
                 <span className="inline-block px-3 py-1 rounded-full text-sm font-medium mb-3 bg-primary/10 text-primary">
@@ -68,7 +68,7 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CreditCard className="text-secondary" size={32} />
                 </div>
-                <h3 className="font-font3 font-semibold text-md mb-2">
+                <h3 className="font-font3 font-semibold   mb-2">
                   Free Demat Account
                 </h3>
                 <span className="inline-block px-3 py-1 rounded-full text-sm font-medium mb-3 bg-green-100 text-green-700">
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="text-primary" size={32} />
                 </div>
-                <h3 className="font-font3 font-semibold text-md mb-2">
+                <h3 className="font-font3 font-semibold   mb-2">
                   Fast Onboarding
                 </h3>
                 <span className="inline-block px-3 py-1 rounded-full text-sm font-medium mb-3 bg-blue-100 text-blue-700">
@@ -104,7 +104,7 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="text-secondary" size={32} />
                 </div>
-                <h3 className="font-font3 font-semibold text-md mb-2">
+                <h3 className="font-font3 font-semibold   mb-2">
                   Trusted Support
                 </h3>
                 <span className="inline-block px-3 py-1 rounded-full text-sm font-medium mb-3 bg-purple-100 text-purple-700">
@@ -129,7 +129,7 @@ export default function ServicesPage() {
                   Trading Platforms & Tools
                 </h3>
               </div>
-              <p className="text-muted-foreground mb-4">
+              <p className="  mb-4">
                 Access Angel Ones advanced trading platforms with comprehensive
                 tools and features:
               </p>
@@ -142,7 +142,7 @@ export default function ServicesPage() {
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center">
                     <CheckCircle className="text-green-500 mr-2" size={16} />
-                    <span className="text-muted-foreground">{item}</span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -157,7 +157,7 @@ export default function ServicesPage() {
                   Investment Advisory
                 </h3>
               </div>
-              <p className="text-muted-foreground mb-4">
+              <p className="  mb-4">
                 Get expert guidance and personalized investment recommendations:
               </p>
               <ul className="space-y-2">
@@ -169,7 +169,7 @@ export default function ServicesPage() {
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center">
                     <CheckCircle className="text-green-500 mr-2" size={16} />
-                    <span className="text-muted-foreground">{item}</span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -182,7 +182,7 @@ export default function ServicesPage() {
                 </div>
                 <h3 className="  text-2xl font-semibold">Digital Services</h3>
               </div>
-              <p className="text-muted-foreground mb-4">
+              <p className="  mb-4">
                 Enjoy seamless digital experience with modern technology:
               </p>
               <ul className="space-y-2">
@@ -194,7 +194,7 @@ export default function ServicesPage() {
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center">
                     <CheckCircle className="text-green-500 mr-2" size={16} />
-                    <span className="text-muted-foreground">{item}</span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -207,7 +207,7 @@ export default function ServicesPage() {
                 </div>
                 <h3 className="  text-2xl font-semibold">Customer Support</h3>
               </div>
-              <p className="text-muted-foreground mb-4">
+              <p className="  mb-4">
                 Get comprehensive support whenever you need it:
               </p>
               <ul className="space-y-2">
@@ -219,7 +219,7 @@ export default function ServicesPage() {
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center">
                     <CheckCircle className="text-green-500 mr-2" size={16} />
-                    <span className="text-muted-foreground">{item}</span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -238,10 +238,10 @@ export default function ServicesPage() {
             Join thousands of satisfied investors who chose Gupta Investment
             Zone for their investment journey
           </p>
-          <Button>
-            Open Your Account Today
-            <ArrowRight size={15} />
-          </Button>
+          <button className="flex items-center bg-slate-800 p-2 rounded-xl hover:opacity-90 cursor-pointer ">
+            Open Demat Account Now
+            <ArrowRight className="ml-2" size={20} />
+          </button>
         </div>
       </section>
     </div>

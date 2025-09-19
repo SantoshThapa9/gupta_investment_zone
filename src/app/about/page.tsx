@@ -11,7 +11,7 @@ export default function AboutPage() {
             <h1 className="  font-bold text-4xl lg:text-5xl text-foreground mb-6">
               About Gupta Investment Zone
             </h1>
-            <p className="text-md opacity-70 mb-8">
+            <p className="  opacity-70 mb-8">
               Your trusted partner in building wealth through smart investments
             </p>
           </div>
@@ -26,14 +26,14 @@ export default function AboutPage() {
               <h2 className="font-font3 font-bold text-3xl text-foreground mb-6">
                 Who We Are
               </h2>
-              <p className="text-muted-foreground mb-6">
+              <p className="  mb-6">
                 Gupta Investment Zone is a trusted authorized partner of Angel
                 One, one of Indias leading stockbroking companies. We specialize
                 in helping individuals and families build wealth through smart
                 investment strategies and the lowest brokerage rates in the
                 market.
               </p>
-              <p className="text-muted-foreground mb-6">
+              <p className="  mb-6">
                 With years of experience in the financial services industry, we
                 understand the challenges that new and experienced investors
                 face. Our mission is to make investing accessible, affordable,
@@ -47,11 +47,11 @@ export default function AboutPage() {
               <h3 className="  font-semibold text-2xl text-foreground mb-4">
                 Our Partnership with Angel One
               </h3>
-              <p className="text-muted-foreground mb-4">
+              <p className="  mb-4">
                 As an authorized partner of Angel One, we provide you with
                 access to:
               </p>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-2  ">
                 <li>• Advanced trading platforms and tools</li>
                 <li>• Comprehensive research and market insights</li>
                 <li>• Secure and reliable trading infrastructure</li>
@@ -71,7 +71,7 @@ export default function AboutPage() {
                 <h3 className="  font-bold text-2xl text-foreground mb-4">
                   Our Mission
                 </h3>
-                <p className="text-muted-foreground">
+                <p  >
                   To democratize investing by providing the lowest brokerage
                   rates, expert guidance, and seamless access to financial
                   markets through our partnership with Angel One.
@@ -87,7 +87,7 @@ export default function AboutPage() {
                 <h3 className="  font-bold text-2xl text-foreground mb-4">
                   Our Vision
                 </h3>
-                <p className="text-muted-foreground">
+                <p  >
                   To become the most trusted investment partner in India,
                   empowering millions of investors to achieve their financial
                   goals through smart, informed investment decisions.
@@ -101,7 +101,7 @@ export default function AboutPage() {
             <h2 className="  font-bold text-3xl lg:text-4xl text-foreground mb-4">
               Why Investors Choose Us
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl   max-w-2xl mx-auto">
               We are committed to providing exceptional value and service to our
               clients
             </p>
@@ -116,7 +116,7 @@ export default function AboutPage() {
                 <h3 className="  font-semibold text-xl mb-2">
                   Proven Track Record
                 </h3>
-                <p className="text-muted-foreground">
+                <p  >
                   Years of experience helping investors achieve their financial
                   goals with consistent results.
                 </p>
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 <h3 className="  font-semibold text-xl mb-2">
                   Personalized Service
                 </h3>
-                <p className="text-muted-foreground">
+                <p  >
                   Dedicated support team that understands your unique investment
                   needs and goals.
                 </p>
@@ -146,7 +146,7 @@ export default function AboutPage() {
                 <h3 className="  font-semibold text-xl mb-2">
                   Goal-Oriented Approach
                 </h3>
-                <p className="text-muted-foreground">
+                <p  >
                   We focus on helping you achieve specific financial milestones
                   through strategic planning.
                 </p>

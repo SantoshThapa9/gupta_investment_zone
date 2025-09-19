@@ -50,7 +50,6 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${font1.variable} ${font2.variable} ${font3.variable}`}
-      suppressHydrationWarning
     >
       <body>
         <ThemeProvider attribute="class" defaultTheme="light">

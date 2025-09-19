@@ -22,7 +22,7 @@ export default function Navigation() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <header className="bg-background text-foreground border-b border-border sticky top-0 z-50">
+    <header className="bg-background text-foreground border-b border-gray-400/50 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -44,20 +44,20 @@ export default function Navigation() {
                 className="rounded-full"
               />
             )}
-            <strong className="hidden lg:flex font-font3">
+            <strong className="sm:hidden lg:flex text-sm   font-font3">
               Gupta Investment Zone
             </strong>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex font-font2 items-center space-x-6">
-            {navLinks.map(({ href, label, icon }) => (
+            {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
                 className="flex items-center gap-1 hover:text-primary transition-colors"
               >
-                {icon} {label}
+                {label}
               </Link>
             ))}
             <Button>Open Demat Account</Button>
