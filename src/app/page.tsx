@@ -134,7 +134,7 @@ export default function Home() {
         </div>
 
         {/* Horizontal Scroll Section */}
-        <div className="flex space-x-6 overflow-x-auto pb-4 scrollbar-hide">
+        <div className="flex justify-center space-x-6 overflow-x-auto pb-4 scrollbar-hide ">
           {testimonials.map((t, index) => (
             <div
               key={index}
