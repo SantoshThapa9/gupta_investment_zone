@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/Button";
+import ContactForm from "@/components/ContactForm";
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen  ">
@@ -27,72 +28,7 @@ export default function ContactPage() {
                 hours
               </p>
 
-              <form className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium  mb-2"
-                  >
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    required
-                    className="w-full px-3 py-2 border-b  border-gray-300 shadow-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium  mb-2"
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    className="w-full px-3 py-2 border-b  border-gray-300 shadow-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="Enter your email"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium  mb-2"
-                  >
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    required
-                    className="w-full px-3 py-2 border-b  border-gray-300 shadow-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium  mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-3 py-2 border-b  border-gray-300 shadow-sm rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="Tell us about your investment needs..."
-                  />
-                </div>
-
-                <Button type="submit">Send Message</Button>
-              </form>
+              <ContactForm />
             </div>
 
             <div>

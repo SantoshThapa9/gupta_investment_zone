@@ -111,7 +111,7 @@ export default function Footer() {
         <footer className="text-center text-sm  mt-10">
           © {new Date().getFullYear()} . Built by{" "}
           <a
-            href="https://www.santoshthapa.xyz"
+            href="https://santosh-gamma.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-gray-700"

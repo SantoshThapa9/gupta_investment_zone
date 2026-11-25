@@ -43,6 +43,8 @@ export default function Navigation() {
                 alt="logo"
                 className="rounded-full"
               />
+              
+
             )}
             <strong className="sm:hidden lg:flex text-sm   font-font3">
               Gupta Investment Zone

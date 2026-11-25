@@ -34,10 +34,12 @@ export default function Home() {
         <strong className="font-font2 font-light text-xs border border-primary/20 text-primary bg-primary/10 rounded-md px-3 py-1 mt-20">
           Authorized Angel One Partner
         </strong>
-        <h1 className="text-3xl font-font3 md:text-5xl font-bold  mb-2 mt-10 md:mt-15 px-10 max-w-6xl ">
+        <h1 className="absolute [clip:rect(0,0,0,0)]">Gupta Investment Zone</h1>
+
+        <h2 className="text-3xl font-font3 md:text-5xl font-bold  mb-2 mt-10 md:mt-15 px-10 max-w-6xl ">
           Invest Smarter with{" "}
           <span className="text-primary ">Gupta Investment Zone</span>
-        </h1>
+        </h2>
         <p className="  md:text-xl text-gray-600 mb-8 mt-10 md:mt-20">
           Lifetime guidance | Lowest Brokerage Guaranteed
         </p>
@@ -134,11 +136,11 @@ export default function Home() {
         </div>
 
         {/* Horizontal Scroll Section */}
-        <div className="flex justify-center space-x-6 overflow-x-auto pb-4 scrollbar-hide ">
+        <div className="flex justify-start space-x-6 overflow-x-auto pb-4 scrollbar-hide ">
           {testimonials.map((t, index) => (
             <div
               key={index}
-              className="min-w-[300px] max-w-[350px] p-6 border border-gray-300 rounded-lg shadow-sm hover:shadow-lg transition-shadow bg-white flex-shrink-0"
+              className="min-w-[300px] max-w-[350px] p-6 border border-gray-300 rounded-lg shadow-sm hover:shadow-lg transition-shadow  flex-shrink-0"
             >
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
