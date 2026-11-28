@@ -100,7 +100,7 @@ const faqs = [
   {
     question: "What is Gupta Investment Zone?",
     answer:
-      "Gupta Investment Zone is an authorized Angel One partner based in Jamshedpur. We help people understand the demat account application process and get familiar with Angel One's platform and available tools.",
+      "Gupta Investment Zone is an authorized Angel One partner based in Jamshedpur. We offer online guidance to people wherever they are, helping them understand the demat account application process and Angel One's platform. Account availability depends on Angel One's eligibility requirements and service areas.",
   },
   {
     question: "How do I open an Angel One demat account?",
@@ -126,7 +126,7 @@ const organizationJsonLd = {
   url: "https://gupta-investment-zone.vercel.app/",
   logo: "https://gupta-investment-zone.vercel.app/logo.png",
   description:
-    "Authorized Angel One partner in Jamshedpur providing demat account opening guidance, trading platform orientation, and investor education.",
+    "Jamshedpur-based authorized Angel One partner offering online demat account guidance and investor education. Account availability depends on Angel One's eligibility requirements and service areas.",
   telephone: siteConfig.contactNumber,
   email: siteConfig.officialGmail,
   address: {
@@ -134,10 +134,6 @@ const organizationJsonLd = {
     addressLocality: "Mango, Jamshedpur",
     addressRegion: "Jharkhand",
     addressCountry: "IN",
-  },
-  areaServed: {
-    "@type": "City",
-    name: "Jamshedpur",
   },
   sameAs: socialLinks.map(({ href }) => href),
 };
@@ -157,7 +153,7 @@ export default function Home() {
           <div className="hero-copy">
             <div className="hero-eyebrow">
               <span className="status-dot" />
-              Authorized Angel One partner · Jamshedpur
+              Jamshedpur-based · Online guidance wherever you are
             </div>
             <h1>
               <span className="hero-brand-name">Gupta Investment Zone</span>
@@ -166,9 +162,10 @@ export default function Home() {
               <span>account with clarity.</span>
             </h1>
             <p className="hero-description">
-              Gupta Investment Zone helps Jamshedpur clients understand Angel
-              One account opening, stock market trading tools, and investor
-              education.
+              Based in Jamshedpur, we help people online understand Angel One
+              account opening, trading tools, and investor education. Account
+              availability depends on Angel One&apos;s eligibility requirements
+              and service areas.
             </p>
             <div className="hero-actions">
               <Link href={accountOpeningHref} className="button-primary">
@@ -182,7 +179,7 @@ export default function Home() {
               <span className="proof-mark"><ShieldCheck size={16} /></span>
               <div>
                 <strong>Authorized Angel One partner.</strong>
-                <span>Local support in Jamshedpur.</span>
+                <span>Online guidance wherever you are.</span>
               </div>
             </div>
           </div>
@@ -394,13 +391,13 @@ export default function Home() {
         <div className="trust-heading">
           <div>
             <div className="section-kicker"><span>04</span> ABOUT GUPTA INVESTMENT ZONE</div>
-            <h2>Local guidance.<br /><em>Clearer first steps.</em></h2>
+            <h2>Online guidance.<br /><em>Clearer first steps.</em></h2>
           </div>
           <p>
             Based in Dimna, Mango, Jamshedpur, Gupta Investment Zone is an
-            authorized Angel One partner. We help people understand the demat
-            account process, platform features, and available resources so they
-            can make informed decisions at their own pace.
+            authorized Angel One partner offering online guidance to people
+            wherever they are. Account opening is subject to Angel One&apos;s
+            eligibility requirements and service areas.
           </p>
         </div>
         <div className="trust-grid">

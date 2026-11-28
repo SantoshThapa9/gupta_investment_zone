@@ -19,8 +19,10 @@ export default function OfficeMap() {
             </p>
             <h2 id="office-location-title">Find us in Jamshedpur.</h2>
             <p>
-              Our office is in Dimna, Mango, Jamshedpur, Jharkhand.
-              We&apos;d be glad to welcome you.
+              Our office is in Dimna, Mango, Jamshedpur, Jharkhand. We welcome
+              local visitors and can answer online inquiries from elsewhere.
+              Angel One account availability depends on its eligibility
+              requirements and service areas.
             </p>
           </div>
           <a

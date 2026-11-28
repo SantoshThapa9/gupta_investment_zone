@@ -1,7 +1,7 @@
 
 # Gupta Investment Zone
 
-Gupta Investment Zone is a single-page site for an authorized Angel One partner in Jamshedpur. It brings demat account guidance, trading platform information, market education, social channels, contact details, and the office map together on the homepage.
+Gupta Investment Zone is a single-page site for an authorized Angel One partner based in Jamshedpur, offering online guidance to visitors wherever they are. Angel One account availability depends on its eligibility requirements and service areas. The site brings demat account guidance, trading platform information, market education, social channels, contact details, and the office map together on the homepage.
 
 ## Features
 
@@ -97,12 +97,12 @@ Open [http://localhost:3000](http://localhost:3000).
 | Command | Description |
 | --- | --- |
 | `npm run dev` | Start the Next.js development server with Turbopack in `.next-dev` |
-| `npm run build` | Create an optimized webpack production build in `.next-prod` |
+| `npm run build` | Create an optimized production build in `.next` |
 | `npm run start` | Start the production server |
 | `npm run lint` | Run ESLint |
 
-Development and production builds use separate output directories (`.next-dev`
-and `.next-prod`) to avoid manifest conflicts when both commands are used.
+Development uses `.next-dev`; production uses Next.js's default `.next` output,
+which is also expected by Vercel.
 
 ## Chat Assistant
 

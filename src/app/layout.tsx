@@ -29,12 +29,12 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Gupta Investment Zone | Demat Account & Stock Market Trading in Jamshedpur",
+      "Gupta Investment Zone | Online Demat Account Guidance",
     template: "%s | Gupta Investment Zone",
   },
 
   description:
-    "Gupta Investment Zone, an authorized Angel One partner in Jamshedpur, helps with demat account opening and platform guidance. Explore stock market trading tools and investor education. Investments are subject to market risk.",
+    "Based in Jamshedpur, Gupta Investment Zone offers online guidance on Angel One demat account opening, trading tools, and investor education. Account availability depends on Angel One's eligibility requirements and service areas.",
 
   keywords: [
     "Gupta Investment Zone",
@@ -82,9 +82,9 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Gupta Investment Zone | Demat Account & Stock Market Trading in Jamshedpur",
+      "Gupta Investment Zone | Online Demat Account Guidance",
     description:
-      "Open an Angel One demat account with guidance from Gupta Investment Zone in Jamshedpur. Explore trading tools and follow market education updates.",
+      "Jamshedpur-based online guidance on Angel One demat accounts, trading tools, and investor education. Account availability depends on Angel One's eligibility requirements and service areas.",
     url: "https://gupta-investment-zone.vercel.app/",
     siteName: "Gupta Investment Zone",
     locale: "en_IN",
@@ -100,9 +100,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Gupta Investment Zone | Demat Account & Stock Market Trading in Jamshedpur",
+      "Gupta Investment Zone | Online Demat Account Guidance",
     description:
-      "Demat account opening guidance, Angel One trading tools, and investor education from Gupta Investment Zone in Jamshedpur.",
+      "Jamshedpur-based online guidance on Angel One demat accounts, trading tools, and investor education. Account availability depends on Angel One's eligibility requirements and service areas.",
     images: ["/darkLogo.png"],
   },
 
