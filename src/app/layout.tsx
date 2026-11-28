@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
 import { Poppins, Orbitron, Inter } from "next/font/google";
-import { ThemeProvider } from "next-themes";
+import { accountOpeningHref } from "@/data/siteConfig";
 
 const font1 = Inter({
   subsets: ["latin"],
@@ -28,29 +28,23 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://gupta-investment-zone.vercel.app/"),
 
   title: {
-    default: "Gupta Investment Zone | Free Demat Account | Angel One Authorized Partner",
+    default:
+      "Gupta Investment Zone | Demat Account & Stock Market Trading in Jamshedpur",
     template: "%s | Gupta Investment Zone",
   },
 
   description:
-    "Gupta Investment Zone is an Authorized Partner of Angel One. Open your FREE Demat & Trading Account with lowest brokerage, expert investment support, mutual funds, IPOs, stocks, and 24x7 customer assistance.",
+    "Gupta Investment Zone, an authorized Angel One partner in Jamshedpur, helps with demat account opening and platform guidance. Explore stock market trading tools and investor education. Investments are subject to market risk.",
 
   keywords: [
     "Gupta Investment Zone",
     "Gupta Investment Zone Jamshedpur",
-    "Angel One Partner",
-    "Angel One Authorized Partner",
-    "Free Demat Account",
-    "Open Demat Account",
-    "Stock Market",
-    "Trading Account",
-    "Investment Advisor",
-    "Mutual Funds",
-    "IPO Investment",
-    "Lowest Brokerage",
-    "Share Market",
-    "Nifty",
-    "Sensex",
+    "demat account Jamshedpur",
+    "Angel One demat account",
+    "stock market trading",
+    "stock market trading Jamshedpur",
+    "trading platform",
+    "investor education",
   ],
 
   authors: [
@@ -87,24 +81,29 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Gupta Investment Zone | Angel One Authorized Partner",
+    title:
+      "Gupta Investment Zone | Demat Account & Stock Market Trading in Jamshedpur",
     description:
-      "Open your FREE Demat Account with Gupta Investment Zone. Authorized Partner of Angel One offering lowest brokerage, expert support, IPOs, mutual funds, and stock market investing.",
-
+      "Open an Angel One demat account with guidance from Gupta Investment Zone in Jamshedpur. Explore trading tools and follow market education updates.",
     url: "https://gupta-investment-zone.vercel.app/",
     siteName: "Gupta Investment Zone",
     locale: "en_IN",
     type: "website",
-
-
+    images: [
+      {
+        url: "/darkLogo.png",
+        alt: "Gupta Investment Zone",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Gupta Investment Zone",
+    title:
+      "Gupta Investment Zone | Demat Account & Stock Market Trading in Jamshedpur",
     description:
-      "Open your FREE Demat Account with Gupta Investment Zone - Authorized Partner of Angel One.",
-    images: ["/og-image.jpg"],
+      "Demat account opening guidance, Angel One trading tools, and investor education from Gupta Investment Zone in Jamshedpur.",
+    images: ["/darkLogo.png"],
   },
 
   category: "Finance",
@@ -119,15 +118,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${font1.variable} ${font2.variable} ${font3.variable}`}
-      suppressHydrationWarning
     >
       <body>
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <Navigation />
-          {children}
-          <Footer />
-          <Chatbot />
-        </ThemeProvider>
+        <Navigation
+          accountOpeningHref={accountOpeningHref}
+        />
+        {children}
+        <Footer />
+        <Chatbot />
       </body>
     </html>
   );

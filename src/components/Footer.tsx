@@ -1,124 +1,108 @@
-"use client";
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
-import { FiYoutube, FiInstagram } from "react-icons/fi";
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { siteConfig, socialLinks } from "@/data/siteConfig";
+
+const quickLinks = [
+  { href: "/#home", label: "Home" },
+  { href: "/#services", label: "Demat & trading" },
+  { href: "/#community", label: "Follow us" },
+  { href: "/#about", label: "About" },
+  { href: "/#contact", label: "Contact" },
+];
 
 export default function Footer() {
-  const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <footer className=" mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Brand */}
-        <div className="col-span-1 md:col-span-2">
-          <div className="flex items-center space-x-2 mb-4">
-            <div className="w-8 h-8  flex items-center justify-center rounded-full">
-              {mounted && theme && (
-                <Image
-                  src={theme === "light" ? "/darkLogo.png" : "/logo.png"}
-                  alt="Gupta Investment Zone"
-                  width={50}
-                  height={50}
-                />
-              )}
-            </div>
-            <span className=" font-bold text-xl text-foreground">
-              Gupta Investment Zone
-            </span>
-          </div>
-          <p className="  mb-4 max-w-md">
-            Authorized Partner of Angel One. Start your investment journey with
-            the lowest brokerage rates and trusted support.
+    <footer className="border-t border-foreground/10 bg-background text-foreground">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.5fr_.75fr_1fr]">
+        <div>
+          <Link href="/#home" className="font-font3 text-sm font-semibold tracking-tight">
+            Gupta Investment Zone
+          </Link>
+          <p className="mt-4 max-w-sm text-sm leading-7 text-foreground/60">
+            An authorized Angel One partner, here to make your first steps in
+            investing feel a little more personal.
           </p>
-          <div className="flex space-x-4">
-            <Link href="#" className="  hover:text-primary transition-colors">
-              <FiYoutube size={24} />
-            </Link>
-            <Link href="#" className="  hover:text-primary transition-colors">
-              <FiInstagram size={24} />
-            </Link>
-            <Link href="#" className="  hover:text-primary transition-colors">
-              <MessageCircle size={24} />
-            </Link>
+          {socialLinks.length > 0 && (
+            <div className="mt-5 flex flex-wrap gap-4">
+              {socialLinks.map(({ label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs text-foreground/70 transition-colors hover:text-primary"
+                >
+                  {label} <ArrowUpRight size={13} />
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div>
+          <h2 className="text-xs font-semibold uppercase tracking-[.13em]">Explore</h2>
+          <ul className="mt-4 space-y-3">
+            {quickLinks.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="text-sm text-foreground/60 transition-colors hover:text-primary"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-xs font-semibold uppercase tracking-[.13em]">Say hello</h2>
+          <div className="mt-4 space-y-3">
+            {siteConfig.officialGmail && (
+              <a
+                href={`mailto:${siteConfig.officialGmail}`}
+                className="flex items-center gap-2 text-sm text-foreground/60 transition-colors hover:text-primary"
+              >
+                <Mail size={15} /> {siteConfig.officialGmail}
+              </a>
+            )}
+            {siteConfig.contactNumber && (
+              <a
+                href={`tel:${siteConfig.contactNumber.replace(/[^\d+]/g, "")}`}
+                className="flex items-center gap-2 text-sm text-foreground/60 transition-colors hover:text-primary"
+              >
+                <Phone size={15} /> {siteConfig.contactNumber}
+              </a>
+            )}
+            {siteConfig.googleMapLink && (
+              <a
+                href={siteConfig.googleMapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-foreground/60 transition-colors hover:text-primary"
+              >
+                <MapPin size={15} /> Find us on Google Maps
+              </a>
+            )}
+            {!siteConfig.officialGmail &&
+              !siteConfig.contactNumber &&
+              !siteConfig.googleMapLink && (
+              <Link
+                href="/#contact"
+                className="text-sm text-foreground/60 transition-colors hover:text-primary"
+              >
+                Send us a message
+              </Link>
+              )}
           </div>
-        </div>
-
-        {/* Quick Links */}
-        <div>
-          <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
-          <ul className="space-y-2">
-            <li>
-              <Link href="/" className="  hover:text-primary transition-colors">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="  hover:text-primary transition-colors"
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/services"
-                className="  hover:text-primary transition-colors"
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="  hover:text-primary transition-colors"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Services */}
-        <div>
-          <h3 className=" font-semibold text-foreground mb-4">Services</h3>
-          <ul className="space-y-2">
-            <li>
-              <span>Demat Account Opening</span>
-            </li>
-            <li>
-              <span>Trading Support</span>
-            </li>
-            <li>
-              <span>Investment Guidance</span>
-            </li>
-            <li>
-              <span>Portfolio Management</span>
-            </li>
-          </ul>
         </div>
       </div>
 
-      <div className="border-t border-border mt-8 pt-8 text-center">
-        <footer className="text-center text-sm  mt-10">
-          © {new Date().getFullYear()} . Built by{" "}
-          <a
-            href="https://santosh-gamma.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-gray-700"
-          >
-            Santosh
-          </a>
-        </footer>
+      <div className="border-t border-foreground/10">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-2 px-5 py-5 text-xs text-foreground/50 sm:flex-row sm:px-8">
+          <span>© {new Date().getFullYear()} Gupta Investment Zone</span>
+          <span>Investing involves risk. Please make informed decisions.</span>
+        </div>
       </div>
     </footer>
   );

@@ -5,7 +5,7 @@ export interface KnowledgeEntry {
   content: string;
 }
 
-/** Site content used by the chatbot — keep in sync with public pages. */
+/** Site content used by the chatbot — keep in sync with the homepage. */
 export const siteKnowledge: KnowledgeEntry[] = [
   {
     id: "about-company",
@@ -20,25 +20,25 @@ export const siteKnowledge: KnowledgeEntry[] = [
       "angel one",
     ],
     content:
-      "Gupta Investment Zone is a trusted authorized partner of Angel One, one of India's leading stockbroking companies. We help individuals and families build wealth through smart investment strategies and the lowest brokerage rates in the market. Our mission is to make investing accessible, affordable, and profitable for everyone.",
+      "Gupta Investment Zone is an authorized partner of Angel One. We help people understand the account-opening process and get familiar with the platform and available tools.",
   },
   {
     id: "mission",
     topic: "Our Mission",
     keywords: ["mission", "goal", "purpose", "democratize"],
     content:
-      "Our mission is to democratize investing by providing the lowest brokerage rates, expert guidance, and seamless access to financial markets through our partnership with Angel One.",
+      "Our aim is to make it easier for people to understand account options, explore the Angel One platform, and take informed first steps.",
   },
   {
     id: "vision",
     topic: "Our Vision",
     keywords: ["vision", "future", "trusted", "india"],
     content:
-      "Our vision is to become the most trusted investment partner in India, empowering millions of investors to achieve their financial goals through smart, informed investment decisions.",
+      "Our goal is to make the demat account process, platform features, and investing risks easier to understand so people can take informed first steps.",
   },
   {
     id: "brokerage",
-    topic: "Lowest Brokerage",
+    topic: "Brokerage and Fees",
     keywords: [
       "brokerage",
       "fees",
@@ -50,7 +50,7 @@ export const siteKnowledge: KnowledgeEntry[] = [
       "lowest",
     ],
     content:
-      "We offer the lowest brokerage rates guaranteed when you open your account through Gupta Investment Zone. Get the most competitive brokerage rates in the market compared to opening directly elsewhere.",
+      "Brokerage, account maintenance, and other charges depend on Angel One's current schedule. Review the official fee details before applying; contact us if you need help finding them.",
   },
   {
     id: "demat-account",
@@ -65,7 +65,7 @@ export const siteKnowledge: KnowledgeEntry[] = [
       "start",
     ],
     content:
-      "You can open a FREE Demat & Trading Account with zero account opening charges and minimal maintenance fees. The process is quick with minimal documentation, typically completed within 24–48 hours. Visit our Contact page or click 'Open Demat Account' to get started.",
+      "Review the current account features, charges, and KYC requirements on Angel One's official application. Application and activation timing can vary with verification. Use the account-opening link or the contact form on our homepage to get started.",
   },
   {
     id: "angel-one-partnership",
@@ -79,7 +79,7 @@ export const siteKnowledge: KnowledgeEntry[] = [
       "partner",
     ],
     content:
-      "As an authorized partner of Angel One, we provide access to advanced trading platforms and tools, comprehensive research and market insights, secure and reliable trading infrastructure, 24/7 customer support, and lowest brokerage rates guaranteed.",
+      "As an authorized partner, Gupta Investment Zone helps visitors access Angel One's platform and understand available tools. Features and charges are determined by Angel One's current offerings.",
   },
   {
     id: "services-trading",
@@ -94,11 +94,11 @@ export const siteKnowledge: KnowledgeEntry[] = [
       "web",
     ],
     content:
-      "Our trading services include a web-based trading platform, mobile trading app, advanced charting tools, and real-time market data — all powered by Angel One's technology.",
+      "Angel One's trading platform may include web and mobile access, charts, and market data. Check Angel One for current features, charges, and availability.",
   },
   {
     id: "services-advisory",
-    topic: "Investment Advisory",
+    topic: "Investor Education",
     keywords: [
       "advisory",
       "advice",
@@ -111,14 +111,14 @@ export const siteKnowledge: KnowledgeEntry[] = [
       "stock",
     ],
     content:
-      "We offer investment advisory including portfolio analysis & optimization, risk assessment & management, market research & insights, and goal-based investment planning.",
+      "We share general educational information about platform features and market concepts. This is not personalized investment advice. Consider consulting a qualified financial professional for advice specific to your situation.",
   },
   {
     id: "services-digital",
     topic: "Digital Services",
     keywords: ["digital", "kyc", "online", "transfer", "instant"],
     content:
-      "Our digital services include online account opening, digital KYC process, instant fund transfers, and digital contract notes for a seamless experience.",
+      "Angel One provides its account application and digital KYC process online. Check Angel One for current account features and the services available to your account.",
   },
   {
     id: "support",
@@ -133,14 +133,14 @@ export const siteKnowledge: KnowledgeEntry[] = [
       "assistance",
     ],
     content:
-      "We provide 24/7 customer support including a helpline, live chat, email support, and a dedicated relationship manager. Our team offers dedicated investment support and guidance.",
+      "We can help with questions about the account-opening process and point you toward the contact options and platform resources listed on our website.",
   },
   {
     id: "onboarding",
-    topic: "Fast Onboarding",
-    keywords: ["onboarding", "fast", "quick", "documentation", "kyc", "hours"],
+    topic: "Digital Onboarding",
+    keywords: ["onboarding", "fast", "quick", "documentation", "kyc"],
     content:
-      "Account opening is quick and hassle-free with minimal documentation. Most accounts are activated within 24–48 hours.",
+      "Account opening includes an online application and KYC steps. The time needed for verification and activation may vary.",
   },
   {
     id: "contact-info",
@@ -155,14 +155,7 @@ export const siteKnowledge: KnowledgeEntry[] = [
       "whatsapp",
     ],
     content:
-      "Contact us at info@guptainvestmentzone.com or +91 98765 43210. We are located in Mumbai, Maharashtra, India. You can also connect via YouTube, Instagram, or WhatsApp. Visit our Contact page to send a message.",
-  },
-  {
-    id: "office-hours",
-    topic: "Office Hours",
-    keywords: ["hours", "timing", "open", "closed", "saturday", "sunday"],
-    content:
-      "Office hours: Monday–Friday 9:00 AM – 6:00 PM, Saturday 9:00 AM – 2:00 PM, Sunday closed.",
+      "Use the contact form, phone, or email shown on our homepage, or connect through the social links there.",
   },
   {
     id: "why-choose",
@@ -176,26 +169,18 @@ export const siteKnowledge: KnowledgeEntry[] = [
       "personalized",
     ],
     content:
-      "Investors choose us for: lowest brokerage rates, Angel One credibility, fast onboarding, trusted 24/7 support, proven track record, personalized service, and a goal-oriented approach to investing.",
-  },
-  {
-    id: "testimonials",
-    topic: "Client Reviews",
-    keywords: ["review", "testimonial", "rating", "feedback", "clients"],
-    content:
-      "We are trusted by thousands of investors. Clients praise our excellent service, lowest brokerage rates, smooth account opening, great support team, and reliable platform.",
+      "Visitors can explore the Angel One platform through an authorized partner, get help understanding the account-opening process, and find educational information about investing risks.",
   },
 ];
 
 export const CHATBOT_FALLBACK =
-  "I don't have specific information about that in our knowledge base. For personalized help, please contact us at info@guptainvestmentzone.com or +91 98765 43210, or visit our Contact page.";
+  "I don't have specific information about that in our knowledge base. For help with the account-opening process, use the contact form on our homepage.";
 
 export const CHATBOT_GREETING =
-  "Hi! I'm the Gupta Investment Zone assistant. Ask me about our services, demat accounts, brokerage rates, contact details, or office hours — I'll answer using information from our website.";
+  "Hi! I'm the Gupta Investment Zone assistant. Ask me about our services, demat accounts, current fees, contact details, or our Angel One partnership — I'll answer using information from our website.";
 
 export const SUGGESTED_QUESTIONS = [
   "How do I open a demat account?",
   "What are your brokerage rates?",
-  "What are your office hours?",
   "How can I contact you?",
 ];

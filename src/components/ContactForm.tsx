@@ -19,7 +19,11 @@ const initialForm: FormData = {
   message: "",
 };
 
-export default function ContactForm() {
+export default function ContactForm({
+  contactEmail = "",
+}: {
+  contactEmail?: string;
+}) {
   const [form, setForm] = useState<FormData>(initialForm);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -70,7 +74,9 @@ export default function ContactForm() {
     } catch {
       setStatus("error");
       setErrorMessage(
-        "Failed to send your message. Please try again or contact us directly at angelfinancial460@gmail.com."
+        contactEmail
+          ? `Failed to send your message. Please try again or email ${contactEmail}.`
+          : "Failed to send your message. Please try again later."
       );
     }
   };
@@ -130,8 +136,8 @@ export default function ContactForm() {
         <div className="flex items-start gap-2 p-3 rounded-lg bg-green-50 text-green-800 border border-green-200">
           <CheckCircle size={18} className="mt-0.5 shrink-0" />
           <p className="text-sm">
-            Thank you! Your message has been sent. We will get back to you
-            within 24 hours.
+            Thank you! Your message has been sent. We will review it and get
+            back to you as soon as possible.
           </p>
         </div>
       )}

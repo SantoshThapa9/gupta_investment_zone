@@ -1,119 +1,109 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
-import { Menu, X, Home, Info, Briefcase, Phone, Sun, Moon } from "lucide-react";
-import { useTheme } from "next-themes";
 import Image from "next/image";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/", label: "Home", icon: <Home size={18} /> },
-  { href: "/about", label: "About", icon: <Info size={18} /> },
-  { href: "/services", label: "Services", icon: <Briefcase size={18} /> },
-  { href: "/contact", label: "Contact", icon: <Phone size={18} /> },
+  { href: "/#home", label: "Home" },
+  { href: "/#community", label: "Follow" },
+  { href: "/#services", label: "Services" },
+  { href: "/#about", label: "About" },
+  { href: "/#contact", label: "Contact" },
 ];
 
-export default function Navigation() {
+export default function Navigation({
+  accountOpeningHref,
+}: {
+  accountOpeningHref: string;
+}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
 
   return (
-    <header className="bg-background text-foreground border-b border-gray-400/50 sticky top-0 z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            {mounted && theme ? (
-              <Image
-                src={theme === "dark" ? "/logo.png" : "/darkLogo.png"}
-                width={40}
-                height={40}
-                alt="logo"
-                className="rounded-full"
-              />
-            ) : (
-              <Image
-                src="/logo.png"
-                width={40}
-                height={40}
-                alt="logo"
-                className="rounded-full"
-              />
-              
-
-            )}
-            <strong className="sm:hidden lg:flex text-sm   font-font3">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#183a2b] text-[#f3f5ec] shadow-lg shadow-[#10271c]/10">
+      <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8">
+        <Link
+          href="/#home"
+          className="flex items-center gap-2.5"
+          aria-label="Gupta Investment Zone home"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <Image
+            src="/logo.png"
+            width={42}
+            height={42}
+            alt=""
+            className="rounded-full"
+          />
+          <span className="flex flex-col gap-1">
+            <span className=" text-md font-semibold tracking-tight sm:text-sm">
               Gupta Investment Zone
-            </strong>
-          </div>
+            </span>
+            <span className="hidden text-[8px] tracking-[.2em] text-[#b8cdb5] sm:block">
+              ANGEL ONE PARTNER
+            </span>
+          </span>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex font-font2 items-center space-x-6">
+        <nav
+          className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[.04] p-1 md:flex"
+          aria-label="Main navigation"
+        >
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="rounded-full px-4 py-2.5 text-xs text-[#e2e8de]/75 transition-colors hover:bg-white/[.09] hover:text-white"
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+
+        <button
+          type="button"
+          className="rounded-full border border-white/15 p-2.5 text-[#e8eee4] transition-colors hover:bg-white/10 md:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+        >
+          {isMenuOpen ? <X size={21} /> : <Menu size={21} />}
+        </button>
+      </div>
+
+      {isMenuOpen && (
+        <div className="border-t border-white/10 bg-[#183a2b] px-5 py-5 md:hidden">
+          <nav
+            className="mx-auto flex max-w-7xl flex-col gap-1"
+            aria-label="Mobile navigation"
+          >
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="flex items-center gap-1 hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+                className="rounded-lg px-4 py-3 text-sm text-[#e2e8de]/80 transition-colors hover:bg-white/[.07] hover:text-white"
               >
                 {label}
               </Link>
             ))}
-            <Button>Open Demat Account</Button>
-
-            {/* Theme Toggle */}
-            {mounted && (
-              <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-full hover:bg-muted transition-colors"
-                aria-label="Toggle Theme"
-              >
-                {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-              </button>
-            )}
+            <Link
+              href={accountOpeningHref}
+              target={accountOpeningHref.startsWith("/") ? undefined : "_blank"}
+              rel={
+                accountOpeningHref.startsWith("/")
+                  ? undefined
+                  : "noopener noreferrer"
+              }
+              onClick={() => setIsMenuOpen(false)}
+              className="mt-3 rounded-full bg-[#c4d6aa] px-4 py-3.5 text-center text-sm font-semibold text-[#183a2b]"
+            >
+              Open a demat account
+            </Link>
           </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <nav className="flex flex-col space-y-4">
-              {navLinks.map(({ href, label, icon }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
-                >
-                  {icon} {label}
-                </Link>
-              ))}
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full">
-                Open Demat Account
-              </Button>
-              {mounted && (
-                <button
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="flex items-center justify-center gap-2 py-2 rounded-md bg-muted hover:bg-muted/80 transition-colors"
-                >
-                  {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-                  {theme === "dark" ? "Light Mode" : "Dark Mode"}
-                </button>
-              )}
-            </nav>
-          </div>
-        )}
-      </div>
+      )}
     </header>
   );
 }
